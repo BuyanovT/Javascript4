@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Напишите функцию, возвращающую строку с удаленным на заданной позиции символом. Строку и номер удаляемого символа запросите у пользователя и передайте в функцию. Для решения задачи используйте методы получения подстроки.</h1>
+    <script>
+        let strRem=(str,n)=>str.substring(0,n)+str.slice(+n +1,str.length);
+        let str=prompt("Введите строку");
+        let n="s";
+        while(true)
+    {
+        n=+prompt("Введите позицию для удаления");
+        if (!isNaN(n)) break;
+    }
+    let strn=strRem(str,n);
+    alert(strn);
+    </script>    
+</body>
+</html>

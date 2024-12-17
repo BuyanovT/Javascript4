@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Переделайте пример из лекции, где использовался объект messages. Пример для пользователя должен генерироваться случайным образом 
+    (см. задание Тренажер). Результат вычисления и ответ, введенный пользователем, передавайте в метод check, где нужно проверить верно или нет пользователь решил задачу.</h1>
+
+    <script>
+        let messages={
+            'error':"Вы допустили ошибку",
+            'success':"Все прошло успешно",
+            'check':function(n,answer){
+                if (n==answer) console.log(this.success);
+                else console.log(this.error);
+            }
+        }
+        let rand=()=>Math.round(Math.random()*100+1);
+        let a=rand();
+        let b=rand();
+        let user=prompt(`Вычислите ${a}*${b}`);
+        messages.check(user,a*b);
+    </script>
+</body>
+</html>

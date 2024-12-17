@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Напишите функцию, которая возвращает «перевернутое» число. Например, для аргумента 123 функция вернет 321. МАССИВЫ не использовать!</h1>
+    <script>
+        let str=prompt("Введите строку из цифр");
+        if (isNaN(+str))
+        console.log("Ошибка");
+    else
+    {
+        let strn="";
+        for (let i=str.length-1;i>=0;i--)
+        {
+           strn=strn+str.at(i);
+        }
+        alert(strn);
+    }
+    </script>   
+</body>
+</html>
